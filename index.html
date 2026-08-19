@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#081632">
+    <title>XYZ AI | School Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="page-glow glow-one"></div>
+    <div class="page-glow glow-two"></div>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="XYZ AI home">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span>XYZ <b>AI</b><small>School Assistant</small></span>
+        </a>
+        <div class="school-pill">
+          <span class="live-dot"></span>
+          <span>Greenfield International School</span>
+          <i>Demo environment</i>
+        </div>
+        <button class="quiet-button" id="new-session" type="button">Switch role</button>
+      </header>
+
+      <section class="workspace">
+        <aside class="control-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">Secure access</p>
+            <h1>Who is talking to Maya?</h1>
+            <p class="muted">Your role controls what Maya can safely view or do.</p>
+          </div>
+          <div class="role-list" id="role-list" aria-label="Choose a role"></div>
+          <label class="language-select">
+            <span>Conversation language</span>
+            <select id="language">
+              <option value="en">English</option>
+              <option value="hi">हिंदी (Hindi)</option>
+              <option value="ta">தமிழ் (Tamil)</option>
+              <option value="te">తెలుగు (Telugu)</option>
+              <option value="mr">मराठी (Marathi)</option>
+              <option value="bn">বাংলা (Bengali)</option>
+              <option value="gu">ગુજરાતી (Gujarati)</option>
+              <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+              <option value="kn">ಕನ್ನಡ (Kannada)</option>
+              <option value="ml">മലയാളം (Malayalam)</option>
+              <option value="ur">اردو (Urdu)</option>
+            </select>
+          </label>
+          <div class="security-note">
+            <span class="shield-icon">✦</span>
+            <p><strong>Authorised tools only</strong>Role checks happen before every mock ERP action.</p>
+          </div>
+        </aside>
+
+        <section class="chat-panel">
+          <div class="chat-head">
+            <div>
+              <p class="eyebrow">Your conversation</p>
+              <h2 id="chat-title">Welcome to XYZ AI</h2>
+            </div>
+            <div class="connection"><span class="live-dot"></span> Secure session</div>
+          </div>
+          <div class="conversation" id="conversation" aria-live="polite"></div>
+          <div class="suggestions" id="suggestions"></div>
+          <form class="composer" id="composer">
+            <textarea id="message" rows="1" maxlength="600" placeholder="Ask Maya anything about school..."></textarea>
+            <button id="mic" class="mic-button" type="button" aria-label="Speak to Maya" title="Speak to Maya"><span></span></button>
+            <button class="send-button" type="submit" aria-label="Send message">↗</button>
+          </form>
+          <p class="composer-hint" id="voice-status">Voice input is ready when supported by your browser.</p>
+        </section>
+
+        <aside class="maya-panel">
+          <div class="maya-topline"><span>AI avatar</span><span class="voice-state" id="voice-state">LISTENING READY</span></div>
+          <div class="avatar-stage" id="avatar-stage" data-expression="warm">
+            <div class="orb orb-a"></div><div class="orb orb-b"></div>
+            <div class="avatar-halo"></div>
+            <div class="avatar">
+              <div class="hair hair-left"></div><div class="hair hair-right"></div>
+              <div class="face"><span class="eye eye-left"></span><span class="eye eye-right"></span><span class="nose"></span><span class="mouth"></span></div>
+              <div class="neck"></div><div class="body"></div>
+            </div>
+            <div class="sound-waves"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="maya-info">
+            <div class="maya-name"><span class="avatar-status"></span><div><h2>Maya</h2><p id="persona">Your caring school companion</p></div></div>
+            <p id="avatar-message">I listen, understand context, and only use services your school role permits.</p>
+          </div>
+          <div class="trust-grid">
+            <div><b id="session-role">—</b><span>Verified role</span></div>
+            <div><b>11</b><span>Languages</span></div>
+            <div><b>24/7</b><span>Here to help</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <span>XYZ AI uses mock school services for this demonstration.</span>
+        <span><i class="lock">⌁</i> No API keys or private system instructions are exposed in chat.</span>
+      </footer>
+    </main>
+    <template id="message-template">
+      <article class="message">
+        <div class="message-avatar"></div>
+        <div><div class="message-bubble"></div><time></time></div>
+      </article>
+    </template>
+    <script src="/app.js"></script>
+  </body>
+</html>
