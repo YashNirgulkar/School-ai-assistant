@@ -1,0 +1,15 @@
+{
+  "name": "xyz-ai-school-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A secure, human-like school assistant demo with mock ERP services.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node src/run-tests.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
