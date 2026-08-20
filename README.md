@@ -1,4 +1,4 @@
-# XYZ AI - Human-Like School Assistant
+# School AI - Human-Like School Assistant
 
 A full-stack demonstration for the school-assistant assessment. It delivers a polished chat experience with a browser voice interface, expressive avatar, role-aware tools, multilingual interaction, mock school ERP services, and verified human escalation.
 
